@@ -1,0 +1,9 @@
+@import 'CETEIcean.css';
+
+tei-div[type='underlay'] tei-l:nth-child(1)::before {
+    content: '[';    
+}
+
+tei-div[type='underlay'] tei-l:nth-last-child(1)::after {
+    content: ']';    
+}
