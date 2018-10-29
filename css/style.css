@@ -7,3 +7,53 @@ tei-div[type='underlay'] tei-l:nth-child(1)::before {
 tei-div[type='underlay'] tei-l:nth-last-child(1)::after {
     content: ']';    
 }
+
+tei-hi[rend*='italic'] {
+    font-style: italic;
+}
+
+tei-hi[rend*='right'] {
+    float: right;
+}
+
+*[rend*='center'] {
+    text-align: center;
+}
+
+tei-list[type='litany'] {
+    display: table;
+}
+
+tei-list[type='litany'] tei-item {
+    display: table-row;
+}
+
+tei-list[type='litany'] tei-title {
+    display: table-cell;
+}
+
+tei-list[type='litany'] tei-seg[type='toc_page'] {
+    display: table-cell;
+    border-right: 1px solid black;
+    text-align: right;
+    padding-right: 10px;
+}
+
+tei-list[type='litany'] tei-name[type='composer'] {
+    display: table-cell;
+    padding-left: 10px;
+}
+
+tei-choice tei-abbr {
+    display: none;
+}
+
+tei-choice tei-abbr + tei-expan:before,
+tei-choice tei-expan + tei-abbr:before {
+    content: ' ';
+}
+
+tei-choice tei-abbr + tei-expan:after,
+tei-choice tei-expan + tei-abbr:after {
+    content: '';
+}
