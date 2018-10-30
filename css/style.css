@@ -22,14 +22,26 @@ tei-hi[rend*='right'] {
 
 tei-list[type='litany'] {
     display: table;
+    border-bottom: 1px solid Black;
+}
+
+tei-list[type='litany'] tei-head {
+    display: table-caption;
+    border-bottom: 1px solid Black;
 }
 
 tei-list[type='litany'] tei-item {
     display: table-row;
 }
 
+tei-list[type='litany'] tei-item:before {
+    content: attr(n);
+    display: table-cell;
+}
+
 tei-list[type='litany'] tei-title {
     display: table-cell;
+    padding-left: 10px;
 }
 
 tei-list[type='litany'] tei-seg[type='toc_page'] {
@@ -39,7 +51,7 @@ tei-list[type='litany'] tei-seg[type='toc_page'] {
     padding-right: 10px;
 }
 
-tei-list[type='litany'] tei-name[type='composer'] {
+tei-list[type='litany'] tei-name[type='poet'] {
     display: table-cell;
     padding-left: 10px;
 }
@@ -50,10 +62,10 @@ tei-choice tei-abbr {
 
 tei-choice tei-abbr + tei-expan:before,
 tei-choice tei-expan + tei-abbr:before {
-    content: ' ';
+    content: ' [';
 }
 
 tei-choice tei-abbr + tei-expan:after,
 tei-choice tei-expan + tei-abbr:after {
-    content: '';
+    content: ']';
 }
