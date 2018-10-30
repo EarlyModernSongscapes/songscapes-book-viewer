@@ -8,6 +8,10 @@ tei-div[type='underlay'] tei-l:nth-last-child(1)::after {
     content: ']';    
 }
 
+tei-signed[rend='right'] {
+    text-align: right;
+}
+
 tei-hi[rend*='italic'] {
     font-style: italic;
 }
@@ -37,6 +41,7 @@ tei-list[type='litany'] tei-item {
 tei-list[type='litany'] tei-item:before {
     content: attr(n);
     display: table-cell;
+    font-style: italic;
 }
 
 tei-list[type='litany'] tei-title {
@@ -68,4 +73,17 @@ tei-choice tei-expan + tei-abbr:before {
 tei-choice tei-abbr + tei-expan:after,
 tei-choice tei-expan + tei-abbr:after {
     content: ']';
+}
+
+tei-docTitle, tei-byline, tei-docEdition, tei-docImprint  {
+    display: block;
+}
+
+tei-div {
+    display: block;
+    margin-bottom: 5em;
+}
+
+tei-teiHeader {
+    display: none;
 }
