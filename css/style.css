@@ -79,7 +79,15 @@ tei-docTitle, tei-byline, tei-docEdition, tei-docImprint  {
     display: block;
 }
 
-tei-div {
+tei-div:not([type='underlay'][type='headnote']) {
     display: block;
     margin-bottom: 5em;
+}
+
+*[*|lang] {
+    font-style: italic;
+}
+
+*[*|lang='en'] {
+    font-style: normal;
 }
