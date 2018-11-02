@@ -91,3 +91,55 @@ tei-div:not([type='underlay'][type='headnote']) {
 *[*|lang='en'] {
     font-style: normal;
 }
+
+tei-signed {
+    margin-top: 0px;
+}
+
+tei-ab {
+    margin-bottom: 0px;
+}
+
+*[rend*='indent'] {
+    display: block;
+}
+
+*[rend*='indent1'] {
+    padding-left: 1em;
+}
+
+*[rend*='indent2'] {
+    padding-left: 2em;
+}
+
+*[rend*='indent3'] {
+    padding-left: 3em;
+}
+
+*[rend*='indent4'] {
+    padding-left: 4em;
+}
+
+*[rend*='indent5'] {
+    padding-left: 5em;
+}
+
+*[rend*='indent6'] {
+    padding-left: 6em;
+}
+
+*[rend*='indent7'] {
+    padding-left: 7em;
+}
+
+*[rend*='indent8'] {
+    padding-left: 8em;
+}
+
+*[rend*='indent9'] {
+    padding-left: 9em;
+}
+
+*[rend*='indent10'] {
+    padding-left: 10em;
+}
