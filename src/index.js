@@ -45,7 +45,7 @@ idTable = {
   'song19': songsBaseUrl + 'ems%3A91',
   'song36': songsBaseUrl + 'ems%3A89',
   'song35': songsBaseUrl + 'ems%3A93',
-  'song21': songsBaseUrl + 'ems%3A95',
+  'song21': songsBaseUrl + 'ems%3A595',
   'song17': songsBaseUrl + 'ems%3A96',
   'song32': songsBaseUrl + 'ems%3A101',
   'song12': songsBaseUrl + 'ems%3A108',
@@ -75,7 +75,7 @@ idTable = {
   'song49': songsBaseUrl + 'ems%3A98',
   'song50': songsBaseUrl + 'ems%3A100',
   'song51': songsBaseUrl + 'ems%3A81',
-  'song52': songsBaseUrl + 'ems%3A93',
+  'song52': songsBaseUrl + 'ems%3A94',
 }
 
 function addLinks(TEI) {
