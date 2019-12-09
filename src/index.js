@@ -79,23 +79,21 @@ idTable = {
 }
 
 function addLinks(TEI) {
-  linkText = '[see song edition]'
+  // internal links
   TEI.querySelectorAll('*[corresp]').forEach(function(link) {
     a = document.createElement('a')
-    a.innerText = linkText
-    a.setAttribute('href', idTable[link.getAttribute('corresp').slice(1)])
-    if (link.tagName.toLowerCase() !== 'tei-divgen') {
-      a.classList.add('edlink')
-    }
-    link.appendChild(a)
+    a.innerHTML = link.innerHTML
+    a.setAttribute('href', link.getAttribute('corresp'))
+    link.innerHTML = a.outerHTML
   })
 
+  // links to full editions
   Object.keys(idTable).forEach(function(id) {
-    link = TEI.querySelector('#'+id)
+    link = TEI.querySelector('#'+id+" tei-head")
     a = document.createElement('a')
-    a.innerText = linkText
+    a.innerHTML = link.innerHTML
     a.setAttribute('href', idTable[id])
-    link.parentNode.insertBefore(a, link)
+    link.innerHTML = a.outerHTML
   })
 }
 
